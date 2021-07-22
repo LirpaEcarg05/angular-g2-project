@@ -14,8 +14,8 @@ export class ThirdComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClick(){
-    // alert('test');
-    this.thirdOutput.emit('emitted value');
-  }
+  // onClick(){
+  //   // alert('test');
+  //   this.thirdOutput.emit('emitted value');
+  // }
 }

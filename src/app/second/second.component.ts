@@ -15,7 +15,7 @@ export class SecondComponent implements OnInit {
   }
 
   getMessage(){
-    return this.secondMessage? this.secondMessage :'_________________';
+    return this.secondMessage? this.secondMessage :'';
   }
 
 }
