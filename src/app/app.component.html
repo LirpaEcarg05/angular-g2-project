@@ -1,21 +1,31 @@
-<h1>Activity 4</h1>
-<h2>Counter with value 5 and below</h2>
+<!-- <h1>Activity 4</h1>
+<h2>Counter with value 5 and below</h2> -->
 
 <p>{{title}}</p>
 
-Count:<input type="text" [value] = "i">
+<!-- Count:<input type="text" [value] = "i">
 
 <br><br>
 <button (click)="plus()">Add Count</button>
 <br>
-<button (click)="minus()">Sub Count</button>
+<button (click)="minus()">Sub Count</button> -->
+
+
+
 <!-- <app-first (firstEvent) = "appEvent($event)"></app-first> -->
-<app-second [secondMessage] = "appMessage"></app-second>
+<!-- <app-second [secondMessage] = "appMessage"></app-second> -->
 <!-- <app-third (thirdOutput) = "appEvent($event)"></app-third>
 <app-fourth></app-fourth> -->
 
 <!-- <div *ngFor = "let message of appMessageArray">
     <app-first></app-first>
 </div> -->
+
+<h1>Device Details View</h1>
+
+<div *ngFor="let device of devices">
+    <app-device-details [deviceDetail]="device"></app-device-details>
+</div>
+
 
 <router-outlet></router-outlet>
