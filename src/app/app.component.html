@@ -21,13 +21,27 @@
     <app-first></app-first>
 </div> -->
 
-<!-- <h1>Device Details View</h1> -->
-
-
 <!-- <div *ngFor="let device of devices"></div> -->
-<div *ngFor="let device of devices">
+<!-- <div *ngFor="let device of devices">
     <app-device-details [deviceDetail]="device"></app-device-details>
+</div> -->
+<!-- <app-template-form (deviceEvent) = "addDevice($event)"></app-template-form> -->
+
+<h1>Device Details View</h1>
+<div *ngIf="!showUpdate">
+    <div *ngFor="let device of devices">
+         <app-device-details
+        [deviceDetail]="device"
+        (updateDetail)="updateDetail($event)"
+    ></app-device-details>
+    </div>
 </div>
-<app-template-form (deviceEvent) = "addDevice($event)"></app-template-form>
+
+<div *ngIf="showUpdate">
+    <app-reactive-form
+        [device]="deviceDetail"
+        (update)="updateDisplay($event)"
+    ></app-reactive-form>
+</div>
 
 <router-outlet></router-outlet>
