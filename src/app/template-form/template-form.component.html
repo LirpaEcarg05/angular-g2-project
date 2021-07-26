@@ -1,0 +1,26 @@
+<!-- <p>template-form works!</p> -->
+<h1>Add a Device</h1>
+
+<form #addForm="ngForm" (ngSubmit)="addDevice(addForm)">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="device-name-id" ngModel>
+    </div>
+    <div class="form-group">
+        <label for="brand">Brand:</label>
+        <input type="text" name="brand" id="device-brand-id" ngModel>
+    </div>
+    <div class="form-group">
+        <label for="model">Model:</label>
+        <input type="text" name="deviceBrand" id="device-model-id" ngModel>
+    </div>
+    <div class="form-group">
+        <label for="year">Year:</label>
+        <input type="text" name="year" id="device-year-id" ngModel>
+    </div>
+    <div class="form-group">
+        <label for="serial">Serial:</label>
+        <input type="text" name="serial" id="device-serial-id" ngModel>
+    </div>
+    <button type="submit">Add Device</button>
+</form> 

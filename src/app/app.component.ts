@@ -34,21 +34,9 @@ export class AppComponent {
   //   this.i--;
   // }
 
-  devices: Device[] = [
-    {
-      name:  "Device01",
-      brand: "Lenovo",
-      model: "ITZ400",
-      year: "2021",
-      serial: "123456ertyy"
-    },
-    {
-      name:  "Device02",
-      brand: "Dell",
-      model: "Latitude",
-      year: "2014",
-      serial: "asdfqwe11111"
-    }
-  ]
+  devices: Device[] = []
 
+  addDevice(device:Device){
+    this.devices.push(device);
+  }
 }
