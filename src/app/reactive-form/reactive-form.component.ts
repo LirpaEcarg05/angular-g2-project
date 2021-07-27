@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import {Router} from '@angular/router';
 import { FormControl, FormGroup, NgForm } from '@angular/forms';
 import { Device } from '../models';
 
@@ -23,7 +24,7 @@ export class ReactiveFormComponent implements OnInit {
   
   @Output() update = new EventEmitter;
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
     this.updateForm = new FormGroup({
@@ -38,7 +39,8 @@ export class ReactiveFormComponent implements OnInit {
 
   updateDevice(){
     // alert('update device');
-    console.log(this.updateForm.value);
-    this.update.emit(this.updateForm.value);
+    // console.log(this.updateForm.value);
+    // this.update.emit(this.updateForm.value);
+    this.route.navigate(['/list']);
   }
 }

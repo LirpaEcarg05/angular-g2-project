@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {Router} from '@angular/router';
 import { Device } from './../models';
 
 @Component({
@@ -19,7 +20,7 @@ export class DeviceDetailsComponent implements OnInit {
 
   @Output() updateDetail = new EventEmitter();
 
-  constructor() { 
+  constructor(private route: Router) { 
     
   }
 
@@ -27,8 +28,9 @@ export class DeviceDetailsComponent implements OnInit {
 
   }
 
-  updateDevice(id:any){
-    this.updateDetail.emit(id);
+  updateDevice(){
+    // this.updateDetail.emit(id);
+    this.route.navigate(['/update']);
   }
 
 }
