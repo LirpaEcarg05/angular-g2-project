@@ -1,6 +1,7 @@
 <h1>Add a Device</h1>
 
 <form #addForm="ngForm" (ngSubmit)="addDevice(addForm)">
+    <input type="hidden" name="id" id="id" ngModel>
     <div class="form-group">
         <label for="name">Name:</label>
         <input type="text" name="name" id="device-name-id" ngModel>

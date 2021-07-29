@@ -73,8 +73,6 @@ export class AppComponent {
     this.devices[index] = updatedDevice || this.deviceDetail;
     console.log(index);
     console.log(updatedDevice);
-    
-    
   }
 
 }

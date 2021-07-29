@@ -5,4 +5,4 @@
 <p>Year: {{deviceDetail.year}}</p>
 <p>Serial: {{deviceDetail.serial}}</p>
 
-<button type="submit" (click)="updateDevice()">Update</button>
+<button type="submit" (click)="updateDevice(deviceDetail.id || 0)">Update</button>

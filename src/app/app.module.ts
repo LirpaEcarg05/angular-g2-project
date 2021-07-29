@@ -26,7 +26,7 @@ import { DeviceListComponent } from './device-list/device-list.component';
     ReactiveFormComponent,
     DeviceListComponent
   ],
-  imports: [
+  imports: [ 
     BrowserModule,
     AppRoutingModule,
     FormsModule,
