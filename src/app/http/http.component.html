@@ -1,0 +1,30 @@
+<!-- <div *ngFor = "let post of posts">
+    <h4>Name: {{post.name}}</h4>
+    <button type="submit" (click)="">View Details</button> -->
+    <!-- <ul>Username: {{post.username}}</ul>
+    <ul>Email: {{post.email}}</ul> -->
+<!-- </div> -->
+
+<div *ngIf="!showUserDetails">
+    <h1>Lists of Users</h1>
+    <div *ngFor="let user of users">
+        <h4>{{user.name}} 
+            <button (click) = "viewUserDetails(user.id)">View Details</button>
+        </h4>
+    </div>
+</div>
+
+<div *ngIf = "showUserDetails">
+    <h1>User Details</h1>
+    <div>
+        <h4>{{selectUser?.name}}</h4>
+        <ul>Username: {{selectUser?.username}}</ul>
+        <ul>Email: {{selectUser?.email}}</ul>
+        <ul>Address: {{selectUser?.address?.street + ", " + selectUser?.address?.suite + ", " + selectUser?.address?.city}}</ul>
+        <ul>Zipcode: {{selectUser?.address?.zipcode}}</ul>
+        <ul>Phone: {{selectUser?.phone}}</ul>
+        <ul>Website: {{selectUser?.website}}</ul>
+        <ul>Company: {{selectUser?.company?.name}}</ul>
+        <button (click) = "backToUser()">Bact to Users</button>
+    </div>
+</div>
